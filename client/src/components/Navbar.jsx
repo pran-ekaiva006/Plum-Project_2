@@ -21,6 +21,14 @@ const CloseIcon = () => (
   </svg>
 );
 
+const QUIZ_TOPICS = [
+  { name: 'Wellness', icon: '🧘', path: '?topic=wellness' },
+  { name: 'Tech Trends', icon: '💻', path: '?topic=tech' },
+  { name: 'Nutrition', icon: '🥗', path: '?topic=nutrition' },
+  { name: 'Fitness', icon: '💪', path: '?topic=fitness' },
+  { name: 'Mental Health', icon: '🧠', path: '?topic=mental-health' }
+];
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -90,10 +98,6 @@ export default function Navbar() {
       {/* Mobile Dropdown Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <div className="hero-badge mobile-badge">
-            <span className="pulse-dot"></span>
-            AI-Powered Learning
-          </div>
           <a 
             href="https://github.com/pran-ekaiva006/Plum-Project_2" 
             target="_blank" 
@@ -105,6 +109,30 @@ export default function Navbar() {
             <GitHubIcon />
             <span>View on GitHub</span>
           </a>
+
+          <div className="menu-divider"></div>
+
+          <div className="menu-section">
+            <h3 className="menu-section-title">Quiz Topics</h3>
+            <div className="menu-topics">
+              {QUIZ_TOPICS.map((topic) => (
+                <a
+                  key={topic.name}
+                  href={topic.path}
+                  className="menu-topic-link"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="menu-topic-icon">{topic.icon}</span>
+                  <span className="menu-topic-name">{topic.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="hero-badge mobile-badge">
+            <span className="pulse-dot"></span>
+            AI-Powered Learning
+          </div>
         </div>
       </div>
 
