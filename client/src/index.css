@@ -105,6 +105,73 @@ code {
   transform: translateY(-2px);
 }
 
+/* Enhanced GitHub Button for Mobile Menu */
+.github-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.github-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.github-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.github-button:hover::before {
+  opacity: 1;
+}
+
+.github-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.github-button-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.github-button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.github-button svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.github-button:hover svg:last-child {
+  transform: translate(2px, -2px);
+}
+
 /* Mobile Menu Styles */
 .mobile-menu-button {
   display: none;
@@ -158,21 +225,7 @@ code {
 }
 
 .mobile-github-link {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  color: #1a1a1a;
-  text-decoration: none;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.05);
-  transition: all 0.2s;
-  font-weight: 500;
-}
-
-.mobile-github-link:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  display: none;
 }
 
 .menu-divider {
