@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import './index.css'
 import './App.css'
 import Navbar from './components/navbar.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './components/footer.jsx'
 import HeroSection from './components/HeroSection.jsx'
 import QuizRunner from './components/QuizRunner.jsx'
+import { useQuizStore } from './state/quizStore.js'
 
 export default function App() {
-  const [topic, setTopic] = useState('')
+  const { topic, setTopic, reset } = useQuizStore()
   const [isTransitioning, setIsTransitioning] = useState(false)
 
   const handleStart = (selectedTopic) => {
@@ -21,7 +22,7 @@ export default function App() {
   const handleReset = () => {
     setIsTransitioning(true)
     setTimeout(() => {
-      setTopic('')
+      reset()
       setIsTransitioning(false)
     }, 300)
   }

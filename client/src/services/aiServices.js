@@ -1,5 +1,5 @@
 import { QuizPayloadSchema, FeedbackSchema } from '../types/quiz.js'
-import { safeJsonParse, sleep } from '../utils.js'
+import { safeJsonParse, sleep } from '../../utils.js'
 
 // --- Prompt Templates ---
 export const QUIZ_JSON_PROMPT = (topic) => `
