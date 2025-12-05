@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './index.css'
 import './App.css'
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/navbar.jsx'
 import Footer from './components/Footer.jsx'
 import HeroSection from './components/HeroSection.jsx'
+import QuizRunner from './components/QuizRunner.jsx'
 
 export default function App() {
   const [topic, setTopic] = useState('')
@@ -30,10 +31,7 @@ export default function App() {
       <Navbar />
       <main className={`fade-container ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
         {topic ? (
-          <div>
-            <h2>Quiz for: {topic}</h2>
-            <button onClick={handleReset}>Reset Quiz</button>
-          </div>
+          <QuizRunner onReset={handleReset} />
         ) : (
           <HeroSection onStart={handleStart} />
         )}

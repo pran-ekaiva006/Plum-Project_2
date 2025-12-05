@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useQuizStore } from '../state/quizStore.js'
-import { generateQuiz, generateFeedback } from '../services/aiService.js'
+import { generateQuiz, generateFeedback } from '../services/aiServices.js'
 
 /**
  * QuizRunner component for quiz interface
