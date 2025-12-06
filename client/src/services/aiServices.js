@@ -54,11 +54,11 @@ export async function generateQuiz(topic) {
     return mock
   }
 
-  const endpoint = import.meta.env?.VITE_AI_ENDPOINT ?? 'http://localhost:3001/api/generate'
+  const endpoint = import.meta.env?.VITE_AI_ENDPOINT ?? 'https://api.groq.com/openai/v1/chat/completions'
   const apiKey = import.meta.env?.VITE_AI_API_KEY
   
-  if (!endpoint || !apiKey) {
-    throw new Error("AI endpoint or API key missing. Use .env or set VITE_USE_MOCK=true")
+  if (!apiKey) {
+    throw new Error("API key missing. Set VITE_AI_API_KEY in .env")
   }
 
   let lastErr = null
@@ -121,11 +121,11 @@ export async function generateFeedback(topic, score) {
     }
   }
 
-  const endpoint = import.meta.env?.VITE_AI_ENDPOINT ?? 'http://localhost:3001/api/generate'
+  const endpoint = import.meta.env?.VITE_AI_ENDPOINT ?? 'https://api.groq.com/openai/v1/chat/completions'
   const apiKey = import.meta.env?.VITE_AI_API_KEY
   
-  if (!endpoint || !apiKey) {
-    throw new Error("AI endpoint or API key missing. Use .env or set VITE_USE_MOCK=true")
+  if (!apiKey) {
+    throw new Error("API key missing. Set VITE_AI_API_KEY in .env")
   }
 
   const resp = await fetch(endpoint, {
