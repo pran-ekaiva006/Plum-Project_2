@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ThemeToggle } from './ThemeToggle';
 
 const GitHubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="20" height="20">
@@ -77,6 +78,7 @@ export default function Navbar() {
         
         {/* Desktop Navigation */}
         <div className="navbar-links desktop-only">
+          <ThemeToggle />
           <div className="hero-badge">
             <span className="pulse-dot"></span>
             AI-Powered Learning
@@ -106,6 +108,11 @@ export default function Navbar() {
       {/* Mobile Dropdown Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+            <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>Appearance</span>
+            <ThemeToggle />
+          </div>
+
           {/* GitHub Button */}
           <a 
             href="https://github.com/pran-ekaiva006/Plum-Project_2" 
