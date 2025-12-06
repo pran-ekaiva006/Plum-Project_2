@@ -1768,7 +1768,7 @@ code {
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
   }
 
   .navbar-brand {
@@ -1806,50 +1806,123 @@ code {
     display: none;
   }
 
+  /* IMPROVED HERO SECTION FOR MOBILE */
   .hero-section {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem; /* Reduced padding */
+  }
+
+  .hero-container {
+    gap: 1.5rem; /* Reduced gap between header and topics */
+  }
+
+  .hero-header {
+    gap: 0.75rem; /* Tighter spacing for text */
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.75rem; /* Slightly smaller title */
+    line-height: 1.2;
   }
 
   .hero-description {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 100%;
   }
 
   .section-title {
     font-size: 1.25rem;
+    text-align: left; /* Align section title to left for better scanning */
+    margin-bottom: 0.5rem;
+  }
+
+  /* IMPROVED TOPIC CARDS FOR MOBILE (Horizontal Layout) */
+  .topic-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .topic-card {
-    padding: 1.25rem;
+    flex-direction: row; /* Switch to horizontal layout */
+    align-items: center;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+    min-height: auto;
   }
 
   .topic-icon-wrapper {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 0; /* Remove bottom margin used in desktop */
+    flex-shrink: 0;
   }
 
   .topic-icon {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+
+  .topic-content {
+    text-align: left;
   }
 
   .topic-name {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    margin-bottom: 0.125rem;
   }
 
+  .topic-description {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Show only 1 line of description */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Adjust check icon for horizontal layout */
+  .check-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Compact Features Grid */
   .features-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns instead of 1 */
+    gap: 0.75rem;
   }
 
   .feature-item {
-    padding: 0.875rem;
+    padding: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .feature-icon-bg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-icon {
+    font-size: 1.25rem;
+  }
+  
+  .feature-content {
+    align-items: center;
   }
 
   .start-btn {
+    width: 100%;
+    padding: 0.875rem;
     font-size: 1rem;
-    padding: 0.875rem 1.75rem;
+    position: sticky;
+    bottom: 1rem;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* stronger shadow for sticky button */
   }
 }
 
