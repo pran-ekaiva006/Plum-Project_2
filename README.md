@@ -4,9 +4,9 @@ A modern, AI-powered quiz application built with React that generates personaliz
 
 ## 🔗 Live Demo
 
-**🌐 Live Application:** [PlumQuiz on Render](https://plum-quiz.onrender.com) *(Replace with your actual deployment URL)*
+**🌐 Live Application:** [PlumQuiz on Render](https://plum-project-2.onrender.com/) 
 
-**🎥 Video Demonstration:** [Watch Demo](https://youtu.be/your-video-id) *(Add your recording link here)*
+**🎥 Video Demonstration:** [Watch Demo](https://www.loom.com/share/48c264da84e64d059384a183ca179981) 
 
 ## 📸 Screenshots
 
