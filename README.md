@@ -1,16 +1,37 @@
 # AI-Assisted Knowledge Quiz
 
-A modern, AI-powered quiz application built with React and Node.js that generates personalized quizzes on various topics using Groq's LLaMA AI model.
+A modern, AI-powered quiz application built with React that generates personalized quizzes on various topics using Groq's LLaMA AI model.
 
 ## 🎯 Project Overview
 
 This application was built as part of the **SDE Intern Assignment – Problem 2**. It demonstrates:
-- AI integration for dynamic content generation
+- **Client-side AI integration** (Direct calls to Groq API)
 - Modern React patterns with hooks and state management
 - Async data handling with smart retries
 - JSON schema validation
 - Real-time user feedback
 - Responsive design for mobile and desktop
+
+## 🌟 Bonus Features & Polish
+
+### 🌓 Dark/Light Mode
+- Fully integrated theming system using CSS variables and a custom `useTheme` hook.
+- Persists user preference in `localStorage`.
+- Auto-detects system color scheme preference.
+- Smooth color transitions for all UI elements.
+- Custom animated toggle switch with day/night visuals (sun/moon/stars).
+
+### ✨ UI Animations & Micro-interactions
+- **Page Transitions:** Smooth fade-in/out effects when switching between Home and Quiz views.
+- **Loading States:** Custom animated spinner with progress bar and pulsing glow effects.
+- **Hover Effects:** Interactive cards with lift effects and gradient borders.
+- **Feedback:** Pulse animations for badges and heartbeat animation for the footer.
+- **Mobile Menu:** Slide-in animation with backdrop blur.
+
+### 📱 Enhanced Responsiveness
+- Adaptive layouts that switch from grid to stack on mobile.
+- Touch-optimized targets (min 44px) for mobile users.
+- Collapsible navigation menu for smaller screens.
 
 ## 🚀 Quick Start
 
